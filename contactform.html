@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Meyer Management & Consulting NV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #182440;
+      color: #333;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #063855;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #f7941d;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .contact-container p {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #063855;
+    }
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+    .form-group input {
+        background: #9d641f8a;
+    }
+    .form-group textarea {
+      background: #9d641f8a;
+      
+      border-radius: 6px;
+      padding: 0.75rem;
+      width: 100%;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      display: block;
+      width: 100%;
+      background-color: #063855;
+      color: #fff;
+      border: none;
+      padding: 1rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #052a3e;
+    }
+    .radio-group {
+      margin-bottom: 1rem;
+    }
+    .radio-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+    .radio-option input {
+      margin-right: 0.5rem;
+    }
+    .other-input {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <h1>Contact Form Meyer Group</h1>
+    <p style="text-align:center; margin-bottom: 1rem;">Hi, welcome to Meyer Management & Consulting.</p>
+    <h2>What service would you like us to assist you with?  
+Please fill out the form below and we will get back to you within 24 hours</h2>
+    <form action="https://formspree.io/f/xgvaddkz" method="POST">
+
+      <div class="form-group">
+        <label for="fullName">Your name *</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Contact number *</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email address *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="form-group">
+        <label>5. How can we assist you? *</label>
+        <div class="radio-group">
+          <div class="radio-option"><input type="radio" name="assistance" value="Living and working abroad in Suriname">Living and working abroad in Suriname</div>
+          <div class="radio-option"><input type="radio" name="assistance" value="Market Entry into Suriname">Market Entry into Suriname</div>
+          <div class="radio-option"><input type="radio" name="assistance" value="Matchmaking and Business Networking">Matchmaking and Business Networking</div>
+          <div class="radio-option"><input type="radio" name="assistance" value="Corporate and Legal Representation in Suriname">Corporate and Legal Representation in Suriname</div>
+          <div class="radio-option"><input type="radio" name="assistance" value="Partnership/Joint Venture Strategies in Suriname">Partnership/Joint Venture Strategies in Suriname</div>
+          <div class="radio-option"><input type="radio" name="assistance" value="Financial and Investment services">Financial and Investment services</div>
+          <div class="radio-option"><input type="radio" name="assistance" value="Remote Office and Representation">Remote Office and Representation</div>
+          <div class="radio-option">
+            <input type="radio" name="assistance" value="Other">Other
+            <input class="other-input" type="text" name="assistance_other" placeholder="Please specify (optional)">
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="form-group">
+        <label>6. Please give two preferred dates and times so we can follow up with you *</label>
+        <input type="date" name="preferred_date_1" placeholder="Please input date (M/d/yyyy)" required>
+        <br><br>
+        <input type="date" name="preferred_date_2" placeholder="Please input date (M/d/yyyy)">
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

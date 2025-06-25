@@ -41,7 +41,7 @@
 
     header h1 {
       color: #fff;
-      font-size: 18px;
+      font-size: 25px;
     }
 
     nav {
@@ -53,45 +53,93 @@
       font-size: 14px;
     }
 
-    .intro {
-      text-align: center;
-      padding: 40px 20px;
-    }
+.intro {
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 0; /* Add this line */
+}
 
-    .intro h1 {
-      color: #fff;
-      font-size: 35px;
-      text-shadow: #000 2px 2px 3px;
-    }
+.intro h1 {
+  color: #fff;
+  font-size: 35px;
+  text-shadow: #000 1px 1px 2px;
+  margin-top: 75px;
+  margin-bottom: -10px; /* Add to give some spacing */
+}
 
-    .intro h2 {
-      color: #fff;
-      font-size: 25px;
-      /* margin-top: 100px; */
-      text-shadow: #000 1px 1px 2px;
-    }
+.intro h2 {
+  color: #fff;
+  font-size: 28px;
+  text-shadow: #000 1px 1px 2px;
+  margin-bottom: -50px; /* Optional */
+  margin-top: 50px;
+}
+
+.typewriter-paragraph {
+  color: #fff;
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto 60px; /* Adjust to space above cards */
+  text-shadow: #000 1px 1px 2px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  min-height: 120px;
+}
 
     .intro p {
       max-width: 600px;
-      margin: 0 auto;
+      /* margin: 0 auto; */
+      margin-bottom: -100px;
+      margin-top: 100px;
       color: #fff;
       text-shadow: #000 1px 1px 2px;
+
     }
 
-    .cards {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
-      flex-wrap: wrap;
-    }
 
-    .card {
-      background: #f68d12;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  align-items: stretch; /* ⬅️ This makes all cards match height */
+}
+
+.card {
+  background: #f68d12;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  height: 450px; /* ⬅️ Fixed consistent height for all cards */
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.read-more-btn {
+  margin-top: 0px;
+  background-color: #fff;
+  color: #f68d12;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: 60%;
+  align-self: center;
+}
+
+.read-more-btn:hover {
+  background-color: #ffe2c2;
+}
 
     .card img {
       width: 100%;
@@ -132,6 +180,13 @@
     .footer-section h4 {
       font-size: 14px;
       margin-bottom: 10px;
+      color: #fff;
+      
+    }
+
+    footer h4 a {
+      color: #fff;
+      text-decoration: none;
     }
 
     .footer-section p {
@@ -158,15 +213,15 @@
 }
 
 .logo {
-  width: 50px;  /* Adjust as needed */
-  height: auto;
+  width: 75px;  /* Adjust as needed */
+  height: 75px;
   margin-right: 10px;
 }
 
 .site-name {
   color: white;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 30px;
 }
 
 
@@ -177,6 +232,7 @@
     position: relative;
     z-index: 0;
   }
+
   </style>
 </head>
 <body>
@@ -194,9 +250,9 @@
   <nav class="nav-links">
     <a href="index.html">HOME</a>
     <a href="growth.html">GROWTH</a>
-    <a href="NOTHING.html">THE TEAM</a>
-    <a href="newsandinsights.html">NEWS</a>
-    <a href="contactform.html">CONTACT US</a>
+    <a href="NOTHING.html">ABOUT</a>
+    <a href="NOTHING.html">PORTFOLIO</a>
+    <a href="contactPage.html">CONTACT</a>
   </nav>
 </header>
 
@@ -206,56 +262,65 @@
     <!-- <h2>Meyer Management & Consulting NV
 <br>Doing business in suriname starts here <br>  Your trusted strategic partner for
 expanding into Suriname. </h2> -->
-    <h1>Meyer Management Consulting NV</h1>
-    <h2>
-<br>Doing business in suriname starts here <br>  Your trusted strategic partner for
+    <!-- <h1>Meyer Management Consulting NV</h1> -->
+    <h1>
+Doing business in suriname starts here  </h1>
+
+<h2>Your trusted strategic partner for
 expanding into Suriname. </h2>
 
-    <p>At MMC, we make doing business in
-Suriname easy and effective by
-guiding organizations with expert
-insight, seamless support, and strong
-local networks. </p>
+<p class="typewriter-paragraph" id="typewriter"></p>
   </section>
 
   <section class="cards">
     <div class="card">
-      <img src="https://media-public.canva.com/MADGyc0CAiI/4/screen.jpg" alt="Analysis">
-      <h3>STRATEGIC GUIDANCE</h3>
-      <p>Meyer Management Consulting
-is a specialized consultancy firm
-bridging the gap between Suriname
-and international markets. We focus
-on providing strategic guidance and
-practical solutions to international
-companies in successfully navigating
-Suriname’s dynamic business
-landscape ensuring smooth market
-entry and long-term success.</p>
-    </div>
+  <img src="https://media-public.canva.com/MADGyc0CAiI/4/screen.jpg" alt="Analysis">
+  <div class="card-content">
+    <h3>STRATEGIC GUIDANCE</h3>
+    <p>Specialized in bridging the gap between Suriname and international markets. We focus on providing strategic guidance and practical solutions to international companies in successfully navigating Suriname’s dynamic business landscape ensuring smooth market entry and long-term success.</p>
+  </div>
+  <a href="strategic-guidance.html" class="read-more-btn">Read More</a>
+</div>
+
+<div class="card">
+  <img src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FyKZPNQ2QFJ5gSd2ej-Y_6QaJCWSIDcXX4zCO3vXiFl8.jpg?csig=AAAAAAAAAAAAAAAAAAAAANQFut35xjmnWcdQWReUK0807Y450brT3MI1Vew5_XNY&exp=1750646377&signer=media-rpc&token=AAIAAU0AL3lLWlBOUTJRRko1Z1NkMmVqLVlfNlFhSkNXU0lEY1hYNHpDTzN2WGlGbDguanBnAAAAAAGXmqfKKFIxiUgfMjYyXPm3PUlyZZ6-Q2pF8Z0eGwGReYZR-ts9" alt="Advisory">
+  <div class="card-content">
+    <h3>EXPANSION STRATEGIES</h3>
+    <p>Guiding businesses to extend their footprint beyond national borders, leveraging our global network, market intelligence, and expertise in international expansion strategies.</p>
+  </div>
+  <a href="strategic-guidance.html" class="read-more-btn">Read More</a>
+</div>
+
+<div class="card">
+  <img src="https://media-public.canva.com/q110I/MAEN8vq110I/1/s.jpg" alt="Partnership">
+  <div class="card-content">
+    <h3>ONE STOP BUSINESS CONSULTANCY</h3>
+    <p>With international reach and an expansive network in Suriname, the Netherlands but also in the Caribbean region specifically, Meyer Management Consulting ensures seamless business operations through a one-stop business consultancy. Whether you are an entrepreneur, an investor, or a corporate entity, our team provides tailored solutions to help you succeed.</p>
+  </div>
+  <a href="strategic-guidance.html" class="read-more-btn">Read More</a>
+</div>
+
+<!-- <div class="card">
+  <img src="https://media-public.canva.com/MADGyc0CAiI/4/screen.jpg" alt="Analysis">
+  <h3>STRATEGIC GUIDANCE</h3>
+  <p>Specialized in bridging the gap between Suriname and international markets. We focus on providing strategic guidance and practical solutions to international companies in successfully navigating Suriname’s dynamic business landscape ensuring smooth market entry and long-term success.</p>
+  <a href="strategic-guidance.html" class="read-more-btn">Read More</a>
+</div>
+
     <div class="card">
       <img src="https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FyKZPNQ2QFJ5gSd2ej-Y_6QaJCWSIDcXX4zCO3vXiFl8.jpg?csig=AAAAAAAAAAAAAAAAAAAAANQFut35xjmnWcdQWReUK0807Y450brT3MI1Vew5_XNY&exp=1750646377&signer=media-rpc&token=AAIAAU0AL3lLWlBOUTJRRko1Z1NkMmVqLVlfNlFhSkNXU0lEY1hYNHpDTzN2WGlGbDguanBnAAAAAAGXmqfKKFIxiUgfMjYyXPm3PUlyZZ6-Q2pF8Z0eGwGReYZR-ts9" alt="Advisory">
       <h3>EXPANSION STRATEGIES</h3>
-      <p> We guide
-businesses to extend their footprint
-beyond national borders, leveraging
-our global network, market
-intelligence, and expertise in
-international expansion strategies. </p>
+      <p> Guiding businesses to extend their footprint beyond national borders, leveraging our global network, market intelligence, and expertise in international expansion strategies.</p>
+      <a href="strategic-guidance.html" class="read-more-btn">Read More</a>
     </div>
+
     <div class="card">
+
       <img src="https://media-public.canva.com/q110I/MAEN8vq110I/1/s.jpg" alt="Partnership">
       <h3>ONE STOP BUSINESS CONSULTANCY</h3>
-      <p>With international reach and an
-expansive network in Suriname and the
-Netherlands specifically, Meyer
-Management Consulting ensures seamless
-business operations through a one-stop
-business consultancy. Whether you are an
-entrepreneur, an investor, or a corporate
-entity, our team provides tailored
-solutions to help you succeed.</p>
-    </div>
+      <p>With international reach and an expansive network in Suriname, the Netherlands but also in the Caribbean region specifically, Meyer Management Consulting ensures seamless business operations through a one-stop business consultancy. Whether you are an entrepreneur, an investor, or a corporate entity, our team provides tailored solutions to help you succeed. </p>
+<a href="strategic-guidance.html" class="read-more-btn">Read More</a>
+    </div> -->
   </section>
 
   <!-- <div class="Textp">
@@ -267,19 +332,19 @@ solutions to help you succeed.</p>
   <footer>
     <div class="footer-links">
       <div class="footer-section">
-        <h4>About MMC</h4>
+        <h4> <a href="strategic-guidance.html">About MMC</a></h4>
         <!-- <p>Meet the experts that act as catalysts for inclusive business growth.</p> -->
       </div>
       <div class="footer-section">
-        <h4>Vision and Values</h4>
+        <h4> <a href="strategic-guidance.html">Vision and Values</a></h4>
         <!-- <p>Committed to sustainable growth and leadership.</p> -->
       </div>
       <div class="footer-section">
-        <h4>Client Portfolio</h4>
+        <h4> <a href="strategic-guidance.html">Client Portfolio</a></h4>
         <!-- <p></p> -->
       </div>
       <div class="footer-section">
-        <h4>CSR</h4>
+        <h4> <a href="strategic-guidance.html">CSR</a></h4>
         <!-- <p></p> -->
       </div>
     </div>
@@ -287,6 +352,38 @@ solutions to help you succeed.</p>
       &copy; 2019 <strong>Meyer Management Consulting NV</strong> - Meyer Management Consulting NV
     </div>
   </footer>
+
+<script>
+  const text = `At MMC, we make doing business in Suriname easy and effective by guiding organizations with expert insight, seamless support, and strong local networks.`;
+  const target = document.getElementById("typewriter");
+
+  let i = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    if (!isDeleting) {
+      target.textContent += text.charAt(i);
+      i++;
+      if (i === text.length) {
+        setTimeout(() => {
+          isDeleting = true;
+          typeLoop();
+        }, 2000); // pause before deleting
+        return;
+      }
+    } else {
+      target.textContent = text.substring(0, i - 1);
+      i--;
+      if (i === 0) {
+        isDeleting = false;
+      }
+    }
+
+    setTimeout(typeLoop, isDeleting ? 35 : 45); // speed of delete vs typing
+  }
+
+  typeLoop();
+</script>
 
 </body>
 

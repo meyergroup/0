@@ -232,8 +232,8 @@
   <nav class="nav-links">
     <a href="index.html">HOME</a>
     <a href="growth.html">GROWTH</a>
-    <a href="NOTHING.html">ABOUT</a>
-    <a href="NOTHING.html">PORTFOLIO</a>
+    <a href="TemplateTextPage.html?title=This%20page%20is%20still%20in%20development.">ABOUT</a>
+    <a href="TemplateTextPage.html?title=This%20page%20is%20still%20in%20development.">PORTFOLIO</a>
     <a href="contactPage.html">CONTACT</a>
   </nav>
 </header>
@@ -276,8 +276,8 @@
   }
 
   // Read values from URL
-  const heroTitle = getQueryParam('title') || 'DEFAULT TITLE';
-  const heroText = getQueryParam('text') || 'Default paragraph content goes here.';
+  const heroTitle = getQueryParam('title') || '';
+  const heroText = getQueryParam('text') || '';
 
   // Inject them into the page
   document.getElementById('heroTitle').innerText = decodeURIComponent(heroTitle);

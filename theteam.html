@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meyer Management Consulting NV</title>
+  <title>Meyer Management Consulting</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
@@ -64,7 +64,7 @@
 .hero p {
   margin-top: 0;
   width: 100%;
-  font-size: 22px;
+  font-size: 20px;
   color: #fff;
   padding: 0 40px;
   box-sizing: border-box;
@@ -216,8 +216,25 @@
   font-size: 30px;
 }
 
+.hero a {
+  color: #6ec1e4; /* Light blue */
+  text-decoration: underline; /* Optional */
+}
 
+.hero a:hover {
+  color: #a3dbf5; /* Even lighter blue on hover */
+}
 
+.typewriter-paragraph {
+  color: #fff;
+  font-size: 30px;
+  max-width: 800px;
+  margin: 0 auto 0px; /* Adjust to space above cards */
+  text-shadow: #000 1px 1px 2px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  min-height: 0px;
+}
 
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -227,7 +244,7 @@
 <header>
       <div class="logo-text-container">
     <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/WhatsApp%20Image%202025-06-25%20at%2015.55.35.jpeg" alt="Logo" class="logo">
-    <span class="site-name">Meyer Management Consulting NV</span>
+    <span class="site-name">Meyer Management Consulting</span>
   </div>
   <nav class="nav-links">
     <a href="index.html">HOME</a>
@@ -240,13 +257,29 @@
 
 
 <section class="hero" id="home">
-  <h2 class="hero-title">Vision and Values</h2>
-  <p>
+  <!-- <h2 class="hero-title">This page is still in development.</h2> -->
+  <!-- <p>
     <strong>
       Vision: "To be the leading catalyst for connecting global ambition with local opportunity — in & from Suriname."  
       Mission: Uniting global aspirations with local potential by delivering tailored strategies that enable businesses to succeed
     </strong>
+  </p> -->
+  <p class="typewriter-paragraph" id="typewriter"></p>
+
+    <h2 class="hero-title">The Team</h2>
+  <p> 
+    The team at MMC has extensive years of strategic implementation and program management experience with major international consultancies having on their team <strong> global program architect</strong> with 20+ years at international consultancies like KPMG and ATOS Origin, leading strategic implementation, transformation, DEI, and ESG initiatives. <br>
+    <br>With a dynamic career spanning entrepreneurship, C-suite leadership, and strategic consultancy, they have developed expertise in driving growth, innovation and internationalization across diverse industries. With experience living and working in multiple countries, including the Netherlands, Bangladesh, and currently Trinidad & Tobago, members of team MMC bring a unique international perspective to the table.<br>
+    <br>Experiences from our team members include:<br>
+    <br>Through Organizational Transformers NV, guided top-tier businesses—across public and private sectors—in strategic management, HR, project orchestration, leadership cultivation, results-driven frameworks, and lasting institutional transformation <a href="https://unitednews.sr/er-kan-zoveel-meer-gedaan-worden-voor-surinaamse-bedrijven/" target="_blank">unitednews.sr+1suriname-energy.com+1</a>. <i>By co founding and leading a consultancy firm licensed with</i> top-tier training bodies like DOOR International, John Maxwell Certification <i>and other globally recognized providers delivering leadership interventions to organizations in 50+ countries and</i> bringing world-class leadership development into Suriname<br>
+    <br><i>Having led the launch of Suriname’s first entrepreneurship hub “ Ondernemershuis Paramaribo” —offering co-working, financing support, CSR frameworks, and advisory services—for over 100 businesses since 2017. </i><br>
+    <br><a href="https://unitednews.sr/eerste-ondernemershuis-paramaribo/" target="_blank">kunstinstituutmelly.nl+3unitednews.sr+3unitednews.sr+3</a><br>
+    <br><i>Organized and executed cross-border trade missions for entrepreneurs—empowering over multiple diaspora-led ventures to successfully enter new markets, for instance</i> enabling Women entrepreneurs to gain market-ready experience in Suriname within a week <a href="https://unitednews.sr/handelsmissie-goed-voor-diaspora-ondernemers/" target="_blank">suriname-energy.com+2unitednews.sr+2unitednews.sr+2</a> <br>
+    <br><i>Featured speakers at regional energy conferences, forging strategic local content alliances and promoting DEI-led, sustainable practices in the oil & gas sector. </i><br>
+    <br><a href="https://vimeo.com/1095308363/73c04ced08" target="_blank">https://vimeo.com/1095308363/73c04ced08</a><br>
   </p>
+
+
 </section>
 
   <footer>
@@ -269,8 +302,41 @@
       </div>
     </div>
     <div class="copyright">
-      &copy; 2019 <strong>Meyer Management Consulting NV</strong>
+      &copy; 2019 <strong>Meyer Management Consulting</strong>
     </div>
   </footer>
+
+  <script>
+  const text = `"To connect global ambition with local opportunity—right here in Suriname."`;
+  const target = document.getElementById("typewriter");
+
+  let i = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    if (!isDeleting) {
+      target.textContent += text.charAt(i);
+      i++;
+      if (i === text.length) {
+        setTimeout(() => {
+          isDeleting = true;
+          typeLoop();
+        }, 2000); // pause before deleting
+        return;
+      }
+    } else {
+      target.textContent = text.substring(0, i - 1);
+      i--;
+      if (i === 0) {
+        isDeleting = false;
+      }
+    }
+
+    setTimeout(typeLoop, isDeleting ? 35 : 45); // speed of delete vs typing
+  }
+
+  typeLoop();
+</script>
+
 </body>
 </html>

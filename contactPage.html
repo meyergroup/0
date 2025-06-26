@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meyer Management Consulting NV</title>
+  <title>Meyer Management Consulting</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
@@ -75,6 +75,31 @@
       margin-right: auto;
   font-size: 35px;
     }
+
+    .hero-banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Brush Script MT', cursive;
+  font-size: 36px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4); /* optional background for better contrast */
+  padding: 10px 20px;
+  border-radius: 8px;
+}
 
 
     footer {
@@ -210,6 +235,22 @@
   font-size: 30px;
 }
 
+.center-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  margin-top: 30px;
+}
+
+.cursive-heading {
+  /* font-family: 'Georgia', cursive; */
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  max-width: 90%;
+  white-space: nowrap; /* optional: keep text on one line */
+}
+
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -218,30 +259,42 @@
 <header>
       <div class="logo-text-container">
     <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/WhatsApp%20Image%202025-06-25%20at%2015.55.35.jpeg" alt="Logo" class="logo">
-    <span class="site-name">Meyer Management Consulting NV</span>
+    <span class="site-name">Meyer Management Consulting</span>
   </div>
   <nav class="nav-links">
     <a href="index.html">HOME</a>
     <a href="growth.html">GROWTH</a>
-    <a href="TemplateTextPage.html?title=This%20page%20is%20still%20in%20development.">ABOUT</a>
-    <a href="TemplateTextPage.html?title=This%20page%20is%20still%20in%20development.">PORTFOLIO</a>
+    <a href="theteam.html">TEAM</a>
+    <a href="clientportfolio.html">PORTFOLIO</a>
     <a href="contactPage.html">CONTACT</a>
   </nav>
 </header>
 
   <div class="contact-section">
-  <div class="left-column">
+  <!-- <div class="left-column">
+    <p style="font-family: 'Brush Script MT', cursive;">This is a cursive-style font.</p> -->
     <!-- <img src="https://raw.githubusercontent.com/CryptoScanning/ImageStorage/refs/heads/main/Schermafbeelding%202025-06-16%20181832.png" alt="Meyer Management Consulting NV" /> -->
-    <div style="width: 100%; height: 15px; background-color: white;"></div>
+    <!-- <div style="width: 100%; height: 20px; background-color: white;"></div>
     <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/ringweg.png" alt="Ring Center Plaza" />
     <div class="orange-bar"></div>
-  </div>
+  </div> -->
+  <div class="center-container">
+  <p class="cursive-heading"  style="font-family: 'Georgia', serif; font-style: italic;">
+    Strategic Guidance. Local Insight. Global Vision. Driving Change. Delivering Impact.
+  </p>
+</div>
+<div class="left-column">
+  <!-- <p class="cursive-heading">Strategic Guidance. Local Insight. Global Vision. Driving Change. Delivering Impact.</p> -->
+<div style="width: 100%; height: 21px; margin-bottom: -20px; background-color: white;"></div>
+  <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/ringweg.png" alt="Ring Center Plaza" />
+  <div class="orange-bar"></div>
+</div>
 
   <div class="right-column">
     <!-- <h3>Contact Us</h3> -->
     <p>
       <!-- G.R. Meyer<br> -->
-      Meyer Management Consulting NV<br>
+      Meyer Management Consulting<br>
       Ringweg Zuid 95<br>
       Office 1 and 2<br>
       Ring Center Plaza<br>
@@ -287,7 +340,7 @@
       </div>
     </div>
     <div class="copyright">
-      &copy; 2019 <strong>Meyer Management Consulting NV</strong>
+      &copy; 2019 <strong>Meyer Management Consulting</strong>
     </div>
   </footer>
 </body>

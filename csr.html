@@ -74,10 +74,25 @@
   color: #fff;
   font-size: 36px;
   font-weight: bold;
-  margin: 0 40px 20px 40px;
+  margin: 0 40px 50px 40px;
   padding-top: 40px;
   box-sizing: border-box;
 }
+
+.hero ul {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 40px 150px 50px;
+  padding-top: 40px;
+  box-sizing: border-box;
+  text-shadow: #000 1px 1px 2px;
+}
+
+.hero ul li {
+  margin-bottom: 20px;
+}
+
     .hero img {
       width: 100%;
       max-width: 600px;
@@ -210,21 +225,32 @@
   margin-right: 10px;
 }
 
+.image {
+  width: 100%;
+  height: auto;
+}
+
 .site-name {
   color: white;
   font-weight: 600;
   font-size: 30px;
 }
 
-
+  body.bg-image {
+    background: url('https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/CSRBG.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+  }
 
 
   </style>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-image">
 
 <header>
+  
       <div class="logo-text-container">
     <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/WhatsApp%20Image%202025-06-25%20at%2015.55.35.jpeg" alt="Logo" class="logo">
     <span class="site-name">Meyer Management Consulting</span>
@@ -240,13 +266,19 @@
 
 
 <section class="hero" id="home">
-  <h2 class="hero-title">This page is still in development.</h2>
+  <!-- <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/CSRBG.jpeg" alt="" class="image"> -->
+  <!-- <h2 class="hero-title">This page is still in development.</h2> -->
   <!-- <p>
     <strong>
       Vision: "To be the leading catalyst for connecting global ambition with local opportunity — in & from Suriname."  
       Mission: Uniting global aspirations with local potential by delivering tailored strategies that enable businesses to succeed
     </strong>
   </p> -->
+               <ul>
+<li>We promote responsible and sustainable foreign direct investment (FDI) respecting local communities and our carbon negative forest.</li>
+<li>We provide guidance on anti-corruption and compliance for international investors.</li>
+<li>We encourage clients to adopt green business practices (e.g. energy audits, low-carbon logistics).</li>
+</ul>
 </section>
 
   <footer>

@@ -83,6 +83,27 @@
       max-width: 600px;
     }
 
+    .hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+  gap: 30px;
+}
+
+.hero-content p {
+  flex: 1;
+  color: #fff;
+  font-size: 22px;
+}
+
+.hero-content img {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 
     footer {
       background-color: #182440;
@@ -267,6 +288,7 @@
   <p class="typewriter-paragraph" id="typewriter"></p>
 
     <h2 class="hero-title">The Team</h2>
+    <div class="hero-content">
   <p> 
     The team at MMC has extensive years of strategic implementation and program management experience with major international consultancies having on their team <strong> global program architect</strong> with 20+ years at international consultancies like KPMG and ATOS Origin, leading strategic implementation, transformation, DEI, and ESG initiatives. <br>
     <br>With a dynamic career spanning entrepreneurship, C-suite leadership, and strategic consultancy, they have developed expertise in driving growth, innovation and internationalization across diverse industries. With experience living and working in multiple countries, including the Netherlands, Bangladesh, and currently Trinidad & Tobago, members of team MMC bring a unique international perspective to the table.<br>
@@ -278,7 +300,8 @@
     <br><i>Featured speakers at regional energy conferences, forging strategic local content alliances and promoting DEI-led, sustainable practices in the oil & gas sector. </i><br>
     <br><a href="https://vimeo.com/1095308363/73c04ced08" target="_blank">https://vimeo.com/1095308363/73c04ced08</a><br>
   </p>
-
+  <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/TeamIMG.jpeg" alt="Team Image">
+</div>
 
 </section>
 
@@ -321,13 +344,13 @@
         setTimeout(() => {
           isDeleting = true;
           typeLoop();
-        }, 2000); // pause before deleting
+        }, 3000); // pause before deleting
         return;
       }
     } else {
       target.textContent = text.substring(0, i - 1);
       i--;
-      if (i === 0) {
+      if (i === 1) {
         isDeleting = false;
       }
     }

@@ -233,21 +233,116 @@
     z-index: 0;
   }
 
+  .menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #182440;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+  @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .logo-text-container {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .site-name {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .intro h1 {
+    font-size: 24px;
+  }
+
+  .intro h2 {
+    font-size: 18px;
+  }
+
+  .typewriter-paragraph {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .read-more-btn {
+    width: 80%;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-section {
+    max-width: 100%;
+  }
+}
+
   </style>
 </head>
-<body>
+
 
 <header>
-    <!-- <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/Schermafbeelding%202025-06-23%20013114.png" alt="Meyer Management Consulting NV">
-    <h1>Meyer Management Consulting NV</h1>
-    <img/> -->
-
-      <div class="logo-text-container">
+  <div class="logo-text-container">
+    <button class="menu-toggle" onclick="toggleMenu()">
+      &#9776; <!-- hamburger icon -->
+    </button>
     <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/WhatsApp%20Image%202025-06-25%20at%2015.55.35.jpeg" alt="Logo" class="logo">
     <span class="site-name">Meyer Management Consulting</span>
   </div>
 
-  <nav class="nav-links">
+  <nav class="nav-links" id="mobileMenu">
     <a href="index.html">HOME</a>
     <a href="growth.html">GROWTH</a>
     <a href="theteam.html">TEAM</a>
@@ -255,6 +350,7 @@
     <a href="contactPage.html">CONTACT</a>
   </nav>
 </header>
+
 
 <body class="bg-image">
 
@@ -354,6 +450,11 @@ DOING BUSINESS IN SURINAME STARTS HERE   </h1>
   </footer>
 
 <script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("show");
+  }
+
   const text = `We make doing business in Suriname easy and effective by guiding organizations with expert insight, seamless support, and strong local networks.`;
   const target = document.getElementById("typewriter");
 

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meyer Management Consulting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #182440;
+    }
+    header {
+      background: #182440;
+      padding: 10px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      color: #fff;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-links a.active {
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+        nav {
+      background: #182440;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      font-size: 14px;
+    }
+
+
+
+
+    .hero {
+      padding-top: 80px;
+      width: 100%;
+      text-align: left;
+    }
+.hero p {
+  margin-top: 0;
+  width: 100%;
+  font-size: 22px;
+  color: #fff;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 40px 20px 40px;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+    .hero img {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .hero ul {
+  padding: 0;
+  color: #fff;
+  font-size: 25px;
+  margin-left: 40px;
+  list-style-position: inside; /* optional: move bullets inside content box */
+}
+
+.hero ul li {
+  margin-bottom: 15px; /* adjust this value as needed for spacing */
+}
+
+
+    footer {
+      background-color: #182440;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+
+    .footer-section {
+      max-width: 200px;
+    }
+
+    .footer-section h4 {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+        footer h4 a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-section p {
+      font-size: 12px;
+    }
+
+    .copyright {
+      font-size: 12px;
+      color: #ccc;
+    }
+
+        .contact-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .left-column {
+      max-width: 400px;
+    }
+
+    .left-column h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .left-column img {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .left-column .orange-bar {
+      width: 100%;
+      height: 20px;
+      background-color: #f7941d;
+    }
+
+    .right-column {
+      max-width: 400px;
+    }
+
+    .right-column h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #fff
+    }
+
+    .right-column p {
+      font-size: 14px;
+      color: white;
+      line-height: 1.5;
+    }
+
+    .right-column .button {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #f7941d;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .right-column .social-icons {
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 25px;
+    }
+
+        .logo-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 75;  /* Adjust as needed */
+  height: 75px;
+  margin-right: 10px;
+}
+
+.site-name {
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #182440;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .site-name {
+    font-size: 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .hero-content img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .typewriter-paragraph {
+    font-size: 22px;
+    padding: 0 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo-text-container">
+    <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+    <img src="https://raw.githubusercontent.com/meyergroup/0/refs/heads/main/WhatsApp%20Image%202025-06-25%20at%2015.55.35.jpeg" alt="Logo" class="logo">
+    <span class="site-name">Meyer Management Consulting</span>
+  </div>
+  <nav class="nav-links" id="mobileMenu">
+    <a href="index.html">HOME</a>
+    <a href="growth.html">GROWTH</a>
+    <a href="theteam.html">TEAM</a>
+    <a href="clientportfolio.html">PORTFOLIO</a>
+    <a href="contactPage.html">CONTACT</a>
+  </nav>
+</header>
+
+
+<section class="hero" id="home">
+  <h2 class="hero-title">Business Development, Representation and Support </h2>
+               <!-- <ul> -->
+<p>
+Virtual & Serviced Office Solutions by providing professional business addresses, mail handling, and virtual assistant services<br>
+<br>Co-Working Spaces & Business Facilities by providing flexible office spaces, meeting rooms, and corporate event hosting upon request<br>
+<br>Administrative & Licensing Support as well as assistance with permits, trade licenses, and government applications<br>
+<br>HR & Talent Acquisition by connecting with preferred recruitment third parties to provide skilled professionals and HR advisory services<br>
+</p>
+
+<!-- </ul> -->
+  <!-- <p>
+Meyer Management Consulting N.V. (MMC) is a Suriname-based firm committed to helping organizations to successfully navigate the Surinamese business landscape. With multiple footprints in Suriname, the Netherlands and the wider Caribbean, we specialize in market entry, corporate structuring, and business expansion, serving as the strategic bridge between local ambitions and international opportunities.<br> 
+<br>Founded in 2019, MMC was created to support organizations navigating change, expansion, and transformation—bridging local relevance with global standards. We specialize in advancing business development strategies tailored to Suriname’s evolving economic landscape.<br>
+<br>With deep roots in strategic business consulting, MMC delivers tailor-made solutions grounded in implementation excellence, capacity building, and sustainable partnerships. We enable growth with impact—bridging local talent and international opportunity. <br>
+<br>Our clients benefit from a one-stop business service offering, ensuring smooth operations from formation to growth—with a focus on compliance, financial integrity, and strategic partnerships.
+
+  </p> -->
+
+</section>
+
+  <footer>
+    <div class="footer-links">
+      <div class="footer-section">
+        <h4> <a href="aboutmmc.html">About MMC</a></h4>
+        <!-- <p>Meet the experts that act as catalysts for inclusive business growth.</p> -->
+      </div>
+      <div class="footer-section">
+        <h4> <a href="visionandvalues.html">Vision and Values</a></h4>
+        <!-- <p>Committed to sustainable growth and leadership.</p> -->
+      </div>
+      <div class="footer-section">
+        <h4> <a href="clientportfolio.html">Portfolio</a></h4>
+        <!-- <p></p> -->
+      </div>
+      <div class="footer-section">
+        <h4> <a href="csr.html">CSR</a></h4>
+        <!-- <p></p> -->
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2019 <strong>Meyer Management Consulting</strong>
+    </div>
+  </footer>
+
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("show");
+  }
+</script>
+</body>
+</html>
